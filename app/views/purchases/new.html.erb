@@ -1,0 +1,23 @@
+<h2>Record purchase</h2>
+
+<% if @purchase %>
+  <% @purchase.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+<% end %>
+
+<%= form_for :purchase, url: purchases_path do |f| %>
+  <p>
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </p>
+ 
+  <p>
+    <%= f.label :lemonade_type_id, 'Lemonade Type' %><br>
+    <%= f.select :lemonade_type_id, options_from_collection_for_select(LemonadeType.all, :id, :label) %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,28 @@
+<h2>Edit lemonade type</h2>
+
+<h3><%= @lemonade_type.label %></h3>
+
+<% @lemonade_type.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+
+<%= form_for :lemonade_type, url: lemonade_type_path(@lemonade_type), method: :put do |f| %>
+  <p>
+    <%= f.label :label %><br>
+    <%= f.text_field :label %>
+  </p>
+ 
+  <p>
+    <%= f.label :color %><br>
+    <%= f.select :color, ['yellow', 'pink', 'orange'] %>
+  </p>
+
+  <p>
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

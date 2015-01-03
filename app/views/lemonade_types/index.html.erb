@@ -1,0 +1,21 @@
+<h2>Lemonade Types</h2>
+<p><a href='<%= purchases_path %>'>&larr; Back to purchases</a> | <a href='<%= new_lemonade_type_path %>'>New lemonade type</a></p>
+
+<table class="table">
+  <thead>
+    <th>Label</th>
+    <th>Price</th>
+    <th>Color</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <% @lemonade_types.each do |lemonade_type| %>
+      <tr>
+        <td><%= lemonade_type.label %></td>
+        <td><%= number_to_currency(lemonade_type.price) %></td>
+        <td><%= lemonade_type.color %></td>
+        <td><%= link_to 'Edit', edit_lemonade_type_path(lemonade_type) %> | <%= link_to 'Delete', lemonade_type_path(lemonade_type), method: :delete, data: { confirm: "Are you sure you want to delete this lemonade type?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
