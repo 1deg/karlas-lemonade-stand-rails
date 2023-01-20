@@ -1,4 +1,4 @@
-class CreateLemonadeTypes < ActiveRecord::Migration
+class CreateLemonadeTypes < ActiveRecord::Migration[4.2]
   def change
     create_table :lemonade_types do |t|
       t.string :label
