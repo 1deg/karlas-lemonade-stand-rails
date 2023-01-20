@@ -4,6 +4,9 @@ Karla runs a lemonade stand and needs a way to track her cashflow. The applicati
 
 ### Dependencies
 
-* Ruby 2.7 (Recommended to use [rbenv](https://github.com/rbenv/rbenv))
+* Ruby 2.7 (Recommended to use [rbenv](https://github.com/rbenv/rbenv)) 
+  * check with `ruby --version`
 * Bundle 2.4.4
+  * `bundle version`
 * Rails 5.2.6
+  * `rails -v`
