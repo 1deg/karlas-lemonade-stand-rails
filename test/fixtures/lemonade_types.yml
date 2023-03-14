@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  label: MyString
-  color: MyString
+  id: 1
+  label: Label1
+  color: Color1
   price: 9.99
 
 two:
-  label: MyString
-  color: MyString
+  id: 2
+  label: Label2
+  color: Color2
   price: 9.99
